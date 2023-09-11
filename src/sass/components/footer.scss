@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    height: 10rem;
+    color: white;
+    &__img {
+       width:100px;
+       box-sizing: border-box;
+       object-fit: contain;
+    }
+}

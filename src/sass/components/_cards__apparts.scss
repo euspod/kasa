@@ -1,0 +1,33 @@
+@import '../utils/variables';
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:1rem;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: rgb(233, 233, 233);
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    &__apparts {
+        display: flex;
+        flex-direction: column;
+        background:$gradient;
+        border-radius: 0.5rem;
+        align-items:flex-start;
+        color: white;
+        padding: 0.3rem;
+        font-size: 12px;
+        inline-size: min-content;
+    }
+    &__cover {
+        width:300px;
+        height: 200px;
+        padding-top: 0;
+        box-sizing: border-box;
+        object-fit: cover;
+        border-radius: 0.5rem 0.5rem 0.1rem 0.1rem;
+    }
+}

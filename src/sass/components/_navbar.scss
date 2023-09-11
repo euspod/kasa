@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    width:100%;
+    align-items: center;
+    gap:1rem;
+    color: $primary-color;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    &__logo-img {
+        width: 230px;
+        margin-right: auto;
+    }
+   
+    & > *:first-child {
+        margin-right: auto;
+      }
+
+    a.active {
+        text-decoration: underline;
+        text-underline-offset: 8px;
+    }
+
+    
+}
+
+
+
