@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     height: auto;
     background-color: rgb(233, 233, 233);
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     padding: 1rem;
 
     &__apparts {
@@ -29,5 +29,9 @@
         box-sizing: border-box;
         object-fit: cover;
         border-radius: 0.5rem 0.5rem 0.1rem 0.1rem;
+    }
+    & h2 {
+        color: white;
+        font-family: 'Montserrat';
     }
 }

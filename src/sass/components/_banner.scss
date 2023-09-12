@@ -1,13 +1,14 @@
 .banner {
-    font-size: 20px;
-    border-radius: 0.5rem;
+    font-size: 41px;
+    border-radius: 1.5rem;
     color:white;
     display:grid;
     justify-content: center;
     align-items: center;
     height: 170px;
-    background-image: url('../../assets/banner-1.png');
-    background-position: center;
-    background-repeat: no-repeat;
+
+    background: url('../../assets/Background.png'), url('../../assets/banner-1.png');
+    background-position: center , center;
+    background-repeat: no-repeat,no-repeat;
     margin-bottom: 2rem;
 }

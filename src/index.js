@@ -1,27 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import './sass/main.css';
-import App from './App';
-import About from './About';
+import Error from './componentsJs/Error.js';
+import Home from './pages/Home';
+import About from './pages/About';
+import Pages from './pages/Pages';
 import reportWebVitals from './reportWebVitals';
+import Navbar from './componentsJs/Navbar';
+import Banner from './componentsJs/Banner';
+import Footer from './componentsJs/Footer';
+
+
+const Layout = ()=> {
+  return <>
+  <Navbar />
+  <Banner />
+  <Outlet />
+  <Footer />
+  </>
+}
+
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
-    errorElement: <h1>404</h1>
+    element: <Layout />,
+    errorElement: <Error />,
+
+    children: [
+   {   path: "/",
+      element: <Home />},
+      { 
+       path: "/about",
+       element: <About />,
+     },
+     { 
+      path: "/appartments",
+      element: <Pages />
+    },
+    ]
   },
- { 
-  path: "/about",
-  element: <About />,
-},
- { 
-  path: "/apparts",
-  element: <h1>Fiches logements</h1>
-},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
