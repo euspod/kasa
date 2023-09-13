@@ -1,7 +1,6 @@
 @import '../utils/variables';
 
 body {
-    margin-inline: 2rem;
     max-width: 1024px;
     // margin: auto;
     font-family: 'Montserrat', sans-serif;
@@ -10,6 +9,9 @@ body {
     //   sans-serif;
     // -webkit-font-smoothing: antialiased;
     // -moz-osx-font-smoothing: grayscale;
+  }
+  h1,h2,h3 {
+    margin: 0;
   }
 
 a {

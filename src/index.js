@@ -13,12 +13,11 @@ import Footer from './componentsJs/Footer';
 
 
 const Layout = ()=> {
-  return <>
+  return <div>
   <Navbar />
-  <Banner />
   <Outlet />
   <Footer />
-  </>
+  </div>
 }
 
 const router = createBrowserRouter([
@@ -28,10 +27,16 @@ const router = createBrowserRouter([
 
     children: [
    {   path: "/",
-      element: <Home />},
+      element:<div>
+        <Banner />,
+         <Home />
+      </div>},
       { 
        path: "/about",
-       element: <About />,
+       element: <div>
+        <Banner />
+        <About />
+        </div>,
      },
      { 
       path: "/appartments",
