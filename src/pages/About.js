@@ -1,9 +1,11 @@
-import Navbar from "../componentsJs/Navbar"
-import Footer from '../componentsJs/Footer'
+import Specifications from "../componentsJs/SpecSection";
 
 function About() {
-    return  <div>
-            <h1>Hello this is about Kasa</h1>
+    return  <div className="about-sections">
+                <Specifications />
+                <Specifications />
+                <Specifications />
+                <Specifications />
             </div>
     
 };

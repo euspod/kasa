@@ -2,7 +2,6 @@
 import '../sass/main.scss';
 import annonces from '../annonces.json';
 import { NavLink } from 'react-router-dom';
-import Banner from '../componentsJs/Banner';
 
 
 function Home() {

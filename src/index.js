@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import './sass/main.css';
-import Error from './componentsJs/Error.js';
+import Error from './pages/Error.js';
 import Home from './pages/Home';
 import About from './pages/About';
 import Pages from './pages/Pages';
@@ -14,9 +14,11 @@ import Footer from './componentsJs/Footer';
 
 const Layout = ()=> {
   return <div>
-  <Navbar />
-  <Outlet />
-  <Footer />
+    <div className='page-layout'>
+    <Navbar />
+    <Outlet />
+    </div>
+    <Footer />
   </div>
 }
 

@@ -1,0 +1,39 @@
+.error-page {
+    height:17vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    // justify-content: center;
+    align-items: center;
+    color:$primary-color; 
+        @include tablet {
+        height:19vh ;
+        }
+            
+    &__404 {
+        margin: 0 ; 
+        font-size:161px;
+        font-weight:700;
+        @include tablet {
+           font-size: 80px;
+        }
+    }
+    &__message {
+        font-size: 2vw;
+    }
+    a {
+        font-size: 1.5vw;
+        text-decoration: underline;
+        margin: 2.5rem;
+        @include tablet {
+            margin: 1.5rem;
+        }
+    }
+
+    br {
+        display:none;
+        @include tablet {
+            display:inline;
+        }
+    }
+}

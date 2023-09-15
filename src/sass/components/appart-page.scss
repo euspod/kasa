@@ -1,64 +1,24 @@
 
 .appart-page {
     color:$primary-color;
+    margin: auto;
     
-
-    &__cover {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 1.5rem;
-        margin-bottom: 1rem;
-    }
     &__infos-container {
         display: flex;
         margin-bottom: 1rem;
-    }
-    &__infos {
-       width: 80%;
-    }
-
-    &__tags {
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px,200px));
-        gap: 0.5rem;
         margin-top: 1rem;
-    }
-    &__tag {
-        text-align: center;
-        background-color: $primary-color;
-        border-radius: 0.7rem;
-        padding: 0.3em 1em;
-    }
-    &__host {
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
-    }
-    &__profile {
-        display: flex;
-        padding: 0 25px;
-        height: 50px;
-        font-size: 16px;
-        img {
-            object-fit: cover;
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            background-color: grey;
-            margin-left: 0.5em;
-          }
-        }
-    &__rating {
-        
-        color:$primary-color;
-        span {
-            font-size: 40px;
+        @include tablet {
+            flex-direction: column;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
         }
     }
     &__spec-sections {
         display: flex;
         gap: 1.5rem;
+        @include tablet {
+            flex-direction: column;
+        }
     }
-      }
+
+}

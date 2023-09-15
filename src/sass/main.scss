@@ -1,8 +1,15 @@
 @import 'utils/variables';
+@import 'utils/mixins.scss';
 @import './base/base.scss';
+@import './components/page-layout.scss';
 @import 'components/navbar';
 @import 'components/banner';
+@import 'components/about';
+@import './components/error';
 @import './components/cards__apparts.scss';
 @import './components/footer.scss';
 @import './components/appart-page.scss';
 @import './components/spec-section.scss';
+@import './components/appart-cover';
+@import './components/appart-infos';
+@import './components/appart-host';

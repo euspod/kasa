@@ -6,6 +6,7 @@
         color: white;
         margin-bottom: 2rem;
         gap:5rem;
+      
     }
     &__specification {
         display: flex;
@@ -20,6 +21,9 @@
         margin-bottom: -5px;
         z-index: 1;
         position: relative;
+    }
+        i {
+        font-size:25px;
     }
     &__spec-paragraph {
         padding: 1em 1em;

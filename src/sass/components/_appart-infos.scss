@@ -1,0 +1,30 @@
+
+.appart-page {
+    &__infos {
+    width: 100%;
+    margin-top: 2em;
+ }
+
+ &__tags {
+     color:white;
+     display:flex;
+     gap: 0.5rem;
+     margin-top: 1rem;
+     width: 100%;
+    //  font-size: 1em;
+ }
+ &__tag {
+     text-align: center;
+     background-color: $primary-color;
+     border-radius: 0.7rem;
+     padding: 0.3em 1em;
+     font-size: 1rem;
+     @include tablet {
+        min-width: 80px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        // font-size: 1em;
+        }
+ }
+ 
+}
