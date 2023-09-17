@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
+import {createBrowserRouter,RouterProvider,Outlet,useParams} from "react-router-dom";
 import './sass/main.css';
 import Error from './pages/Error.js';
-import Home from './pages/Home';
+import HomeApparts from './componentsJs/HomeApparts';
 import About from './pages/About';
-import Pages from './pages/Pages';
+import AppartsPages from './pages/AppartsPages';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './componentsJs/Navbar';
 import Banner from './componentsJs/Banner';
 import Footer from './componentsJs/Footer';
+
 
 
 const Layout = ()=> {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
    {   path: "/",
       element:<div>
         <Banner />,
-         <Home />
+         <HomeApparts />
       </div>},
       { 
        path: "/about",
@@ -41,8 +42,8 @@ const router = createBrowserRouter([
         </div>,
      },
      { 
-      path: "/appartments",
-      element: <Pages />
+      path: "/appartments/:id",
+      element: <AppartsPages />
     },
     ]
   },
