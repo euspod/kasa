@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../sass/main.scss';
 import { NavLink } from 'react-router-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 
 
 
@@ -22,7 +22,8 @@ function HomeApparts() {
             useEffect(() => {
                 annoncesFetch();
             }, [] );
-        
+                 
+            
             return  (
                 <div className='cards'>
                 {annonces.map((annonce) => (

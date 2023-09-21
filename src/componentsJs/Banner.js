@@ -1,9 +1,18 @@
-// import banner from './assets/banner-1.png';
-import '../sass/main.scss';
+import { useLocation } from 'react-router-dom';
+
 
 function Banner() {
-    return <div className="banner" >
-        Chez vous, <br/>partout et ailleurs
+ 
+  const location = useLocation();
+  const currentPath = location.pathname;
+  console.log('currentPath',currentPath);
+  const bannerClass = currentPath === '/' ? 'banner-home' : 'banner-about';
+
+  return (
+    <div className={bannerClass}>
+      Chez vous, <br />partout et ailleurs
     </div>
+  );
 }
+
 export default Banner;

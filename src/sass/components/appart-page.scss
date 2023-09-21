@@ -2,23 +2,5 @@
 .appart-page {
     color:$primary-color;
     margin: auto;
-    
-    &__infos-container {
-        display: flex;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        @include tablet {
-            flex-direction: column;
-            margin-bottom: 0.5rem;
-            margin-top: 0.5rem;
-        }
-    }
-    &__spec-sections {
-        display: flex;
-        gap: 1.5rem;
-        @include tablet {
-            flex-direction: column;
-        }
-    }
 
 }

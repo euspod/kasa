@@ -5,10 +5,12 @@ import Specifications from '../componentsJs/SpecSection';
 import AppartCover from '../componentsJs/AppartCover';
 import AppartInfos from '../componentsJs/AppartInfos';
 import AppartHost from '../componentsJs/AppartHost';
+import Slideshow from '../componentsJs/Slideshow';
 
 function AppartPages() {
   const { id } = useParams();
   const [annonces, setAnnonces] = useState([]);
+ 
 
   const annoncesFetch = async () => {
     try {
@@ -27,22 +29,35 @@ function AppartPages() {
 
   const annonce = annonces.find((annonce) => annonce.id === id);
 
+  const equipmentList = annonce ? (
+    <ul>
+      {annonce.equipments.map((equipment, index) => (
+        <li key={index}>{equipment}</li>
+      ))}
+    </ul>
+  ) : null;
+
   if (!annonce) {
-    return <div>Chargement...</div>;
+    return <div>Contenu en cours de chargement...</div>;
   }
+
+  
 
   return (
     <main className="appart-page" key={annonce.id}>
       <section className="appart-cover">
-        <AppartCover image={annonce.cover} />
+        
+        <div className="appart-page__carousel-navigation">
+          <Slideshow gallery= {annonce.pictures}/>
+        </div>
       </section>
       <section className="appart-page__infos-container">
-        <AppartInfos />
-        <AppartHost />
+        <AppartInfos title={annonce.title} location={annonce.location} tags={annonce.tags} />
+        <AppartHost name={annonce.host.name} picture={annonce.host.picture} rating={annonce.rating} />
       </section>
       <section className="appart-page__spec-sections">
-        <Specifications />
-        <Specifications />
+        <Specifications title='Description' contents={annonce.description} />
+        <Specifications title='Equipements' contents={equipmentList} />
       </section>
     </main>
   );

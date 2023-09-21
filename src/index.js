@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {createBrowserRouter,RouterProvider,Outlet,useParams} from "react-router-dom";
 import './sass/main.css';
 import Error from './pages/Error.js';
-import HomeApparts from './componentsJs/HomeApparts';
+import HomeApparts from './pages/HomeApparts'
 import About from './pages/About';
 import AppartsPages from './pages/AppartsPages';
 import reportWebVitals from './reportWebVitals';

@@ -1,35 +1,73 @@
 
 .appart-page {
-    &__specs-container {
+    &__spec-sections {
         display: flex;
         justify-content: space-around;
+        gap:5rem;
+
+        @include tablet {
+            flex-wrap: nowrap;
+        }
+    }
+    &__specs {
+        width: 100%;
+        display: flex;
         color: white;
         margin-bottom: 2rem;
-        gap:5rem;
-      
+        overflow: hidden;
+        
     }
-    &__specification {
+    
+    &__specifications {
         display: flex;
         flex-direction: column;
+        flex-basis: 100%;
+
     }
     &__spec-bar {
+        position: relative;
         display: flex;
         justify-content: space-between;
         border-radius: 0.7rem;
         background-color: $primary-color;
         padding: 1em 1em;
-        margin-bottom: -5px;
         z-index: 1;
-        position: relative;
+        margin-bottom: 0px;
+        &.active {
+            margin-bottom: -5px;
+        }
     }
-        i {
+    &__trigger {
+        font-size:25px;
+        transform: rotate(180deg);
+        transition: transform 0.5s ease-in-out;
+    }
+    &__trigger-active {
+        transition: transform 0.5s ease-in-out;
+        transform: rotate(0deg);
         font-size:25px;
     }
     &__spec-paragraph {
-        padding: 1em 1em;
+        transform: translateY(-100%);
+        box-sizing: border-box;
+        display: none;
+        transition: max-height 0.5s ease-in-out;
+        color: $primary-color;
+        padding: 1em;
         border-radius: 0.7rem;
-        background-color: rgb(215, 215, 215);
-        color: black;
+        background-color: rgb(231, 231, 231);
+        &.active {
+            display:block;
+            transform: translateY(0%);
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
     }
     
 }
