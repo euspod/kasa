@@ -19,7 +19,7 @@ const Layout = ()=> {
     <Navbar />
     <Outlet />
     </div>
-    <Footer />
+    <Footer router={router}/>
   </div>
 }
 
@@ -29,6 +29,9 @@ const router = createBrowserRouter([
     errorElement: <Error />,
 
     children: [
+  //  {   path: "/error",
+  //     element:<Error />
+  //   },
    {   path: "/",
       element:<div>
         <Banner />,

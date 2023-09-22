@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import '../sass/main.scss';
 import Specifications from '../componentsJs/SpecSection';
-import AppartCover from '../componentsJs/AppartCover';
 import AppartInfos from '../componentsJs/AppartInfos';
 import AppartHost from '../componentsJs/AppartHost';
 import Slideshow from '../componentsJs/Slideshow';
@@ -10,7 +9,8 @@ import Slideshow from '../componentsJs/Slideshow';
 function AppartPages() {
   const { id } = useParams();
   const [annonces, setAnnonces] = useState([]);
- 
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   const annoncesFetch = async () => {
     try {
@@ -18,6 +18,7 @@ function AppartPages() {
       const responseData = await response.json();
       console.log(responseData);
       setAnnonces(responseData);
+      setLoading(false);
     } catch (error) {
       console.log('Erreur', error);
     }
@@ -37,12 +38,22 @@ function AppartPages() {
     </ul>
   ) : null;
 
-  if (!annonce) {
+  useEffect(() => {
+    if (!annonce && !loading) {
+      navigate('/error');
+    }
+  }, [annonce, loading, navigate]);
+
+  if (loading) {
     return <div>Contenu en cours de chargement...</div>;
   }
 
-  
+  if (!annonce) {
+    return <div>Aucune annonce trouvée.</div>;
+  }
 
+
+  
   return (
     <main className="appart-page" key={annonce.id}>
       <section className="appart-cover">
