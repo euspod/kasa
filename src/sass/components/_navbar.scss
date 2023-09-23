@@ -9,14 +9,21 @@
     white-space: nowrap;
     margin-inline: auto;
     width: 100%;
-        @include tablet {
+        @include mobile-M {
             text-transform: uppercase;
             font-size: 12px;
+        }
+        @include mobile-S {
+            text-transform: uppercase;
+            font-size: 10px;
         }
 
     &__logo-img {
         width: 230px;
-        @include tablet {
+        @include mobile-M {
+            width: 120px;
+        }
+        @include mobile-S {
             width: 120px;
         }
     }
@@ -25,7 +32,7 @@
         margin-right: auto;
     }
     
-    a.active, :hover {
+    &__links.active, :hover {
         text-decoration: underline;
         text-underline-offset: 3px;
     }

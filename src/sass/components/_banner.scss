@@ -6,7 +6,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    height: 170px;
+    height: 12rem;
     background: url('/assets/banner-background.png'), url('/assets/banner-home.png');
     background-position: center , center;
     background-repeat: repeat,no-repeat;
@@ -15,17 +15,40 @@
         @include tablet {
             line-break: normal;
             border-radius: 0.8rem;
-            justify-content: left;
+            justify-content: center;
             padding-left: 0.5em;
             box-sizing: border-box;
-            font-size: 24px;
-            height: 100px;
+            font-size: 41px;
+            // height: 12rem;
         }
- 
+        @include mobile-M {
+            font-size: 24px;
+            box-sizing: border-box;
+            justify-content: left;
+            align-items: center;
+            text-align: left;
+            padding-left:20px;
+            font-size: 24px;
+            border-radius: 0.7rem;
+            height: 6rem;
+        }
+        @include mobile-S {
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: left;
+            text-align: left;
+            padding-left:20px;
+            font-size: 24px;
+            height: 6rem;
+            border-radius: 0.7rem;
+        }
  
     br {
         display :none;
-        @include tablet {
+        @include mobile-S {
+            display: inline;
+        }
+        @include mobile-M {
             display: inline;
         }
     }
@@ -44,13 +67,43 @@
     background-repeat: repeat,no-repeat;
     margin-inline: auto;
     width: 100%;
+       
         @include tablet {
             line-break: normal;
             border-radius: 0.8rem;
-            justify-content: left;
+            justify-content: center;
             padding-left: 0.5em;
             box-sizing: border-box;
+            font-size: 41px;
+        }
+        @include mobile-M {
             font-size: 24px;
-            height: 100px;
+            box-sizing: border-box;
+            justify-content: left;
+            align-items: center;
+            text-align: left;
+            padding-left:20px;
+            font-size: 24px;
+            border-radius: 0.7rem;
+            height: 6rem;
+        }
+        @include mobile-S {
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: left;
+            text-align: left;
+            padding-left:20px;
+            font-size: 24px;
+            height: 6rem;
+            border-radius: 0.7rem;
+        }
+        br {
+            display :none;
+            @include mobile-S {
+                display: inline;
+            }
+            @include mobile-M {
+                display: inline;
+            }
         }
 }
