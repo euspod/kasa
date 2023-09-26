@@ -8,14 +8,23 @@
         @include tablet {
             flex-wrap: nowrap;
         }
+        @include mobile-M {
+            gap: 0.8em;
+        }
+        @include mobile-S {
+            flex-direction: column;
+            gap: 0.1em;
+        }
     }
     &__specs {
         width: 100%;
         display: flex;
         color: white;
-        margin-bottom: 2rem;
+        margin-bottom: 2em;
         overflow: hidden;
-        
+        @include mobile-M {
+            margin-bottom: 1.5em;
+        }
     }
     
     &__specifications {
@@ -30,22 +39,35 @@
         justify-content: space-between;
         border-radius: 0.7rem;
         background-color: $primary-color;
-        padding: 1em 1em;
+        padding: 0.6em 0.5em;
         z-index: 1;
         margin-bottom: 0px;
+        font-size: 1.2rem;
         &.active {
             margin-bottom: -5px;
         }
+        @include mobile-M {
+            font-size: 0.9rem;
+        }
+        @include mobile-S {
+            font-size: 0.9rem;
+        }
     }
     &__trigger {
-        font-size:25px;
+        font-size:1.5rem;
         transform: rotate(180deg);
         transition: transform 0.5s ease-in-out;
+        @include mobile-S {
+            font-size:1rem;
+        }
     }
     &__trigger-active {
         transition: transform 0.5s ease-in-out;
         transform: rotate(0deg);
-        font-size:25px;
+        font-size:1.5rem;
+        @include mobile-S {
+            font-size:1rem;
+        }
     }
     &__spec-paragraph {
         transform: translateY(-100%);

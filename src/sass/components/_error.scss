@@ -1,38 +1,48 @@
 .error-page {
-    height:55vh;
     display: flex;
     flex-direction: column;
     margin: auto;
-    // justify-content: center;
+    justify-content: center;
+    display: flex;
     align-items: center;
     color:$primary-color; 
-        @include tablet {
-        height:19vh ;
-        }
+        
             
     &__404 {
         margin: 0 ; 
-        font-size:161px;
+        font-size:11rem;
         font-weight:700;
-        @include tablet {
-           font-size: 80px;
+        @include mobile-S {
+           font-size: 6rem;
         }
     }
     &__message {
-        font-size: 2vw;
+        font-size: 1.5rem;
+        @include mobile-M{
+            font-size: 1.1rem;
+        }
+        @include mobile-S{
+            font-size: 1.1rem;
+            text-align: center;
+        }
     }
     a {
-        font-size: 1.5vw;
+        font-size: 1.5rem;
         text-decoration: underline;
         margin: 2.5rem;
-        @include tablet {
+        @include mobile-M {
+            font-size: 1.1rem;
+            margin: 1.5rem;
+        }
+        @include mobile-S {
+            font-size: 1.1rem;
             margin: 1.5rem;
         }
     }
 
     br {
         display:none;
-        @include tablet {
+        @include mobile-S {
             display:inline;
         }
     }

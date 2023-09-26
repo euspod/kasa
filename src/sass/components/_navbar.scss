@@ -4,18 +4,20 @@
     align-items: center;
     gap:1rem;
     color: $primary-color;
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-block:1em;
     white-space: nowrap;
     margin-inline: auto;
     width: 100%;
         @include mobile-M {
             text-transform: uppercase;
-            font-size: 12px;
+            font-size: .9rem;
+            font-weight: 500;
         }
         @include mobile-S {
             text-transform: uppercase;
-            font-size: 10px;
+            font-size: 0.75rem;
+            font-weight: 500;
         }
 
     &__logo-img {
@@ -31,11 +33,13 @@
     & > *:first-child {
         margin-right: auto;
     }
-    
+
     &__links.active, :hover {
-        text-decoration: underline;
-        text-underline-offset: 3px;
-    }
+            
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+   
 
 
     

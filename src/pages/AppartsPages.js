@@ -58,7 +58,7 @@ function AppartPages() {
     <main className="appart-page" key={annonce.id}>
       <section className="appart-cover">
         
-        <div className="appart-page__carousel-navigation">
+        <div className="appart-page__slideShow-navigation">
           <Slideshow gallery= {annonce.pictures}/>
         </div>
       </section>

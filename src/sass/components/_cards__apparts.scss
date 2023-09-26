@@ -33,7 +33,6 @@
         border-radius: 0.5rem;
         color: white;
         padding: 0.3em;
-        font-size: 12px;
         inline-size: min-content;
         flex-basis: 30%;
         @include mobile-M {
@@ -56,10 +55,12 @@
     }
     & h2 {
         color: white;
-        font-family: 'Montserrat';
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 0.5em;
         min-height: 3rem;
+        @include mobile-S {
+            font-size: 1rem;
+        }
     }
 }
