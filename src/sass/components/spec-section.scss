@@ -19,7 +19,7 @@
     &__specs {
         width: 100%;
         display: flex;
-        color: white;
+        color: $secondary-color;
         margin-bottom: 2em;
         overflow: hidden;
         @include mobile-M {
@@ -77,7 +77,7 @@
         color: $primary-color;
         padding: 1em;
         border-radius: 0.7rem;
-        background-color: rgb(231, 231, 231);
+        background-color: $quaternary-color;
         &.active {
             display:block;
             transform: translateY(0%);

@@ -8,7 +8,7 @@
     justify-content: center;
     gap:1.5rem;
     flex-wrap: wrap;
-    background-color: rgb(233, 233, 233);
+    background-color: $quaternary-color;
     border-radius: 1.5rem; 
     @include tablet {
         gap:1rem;
@@ -31,7 +31,7 @@
         flex-direction: column;
         background:$gradient;
         border-radius: 0.5rem;
-        color: white;
+        color: $secondary-color;
         padding: 0.3em;
         inline-size: min-content;
         flex-basis: 30%;
@@ -54,7 +54,7 @@
         }
     }
     & h2 {
-        color: white;
+        color: $secondary-color;
         font-weight: 400;
         font-size: 1.1rem;
         padding: 0.5em;

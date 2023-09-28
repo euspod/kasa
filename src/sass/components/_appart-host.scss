@@ -42,7 +42,7 @@
             height: 3rem;
             width: 3rem;
             border-radius: 50%;
-            background-color: grey;
+            background-color: $quinary-color;
             margin-left: 0.5em;
             @include mobile-S {
                 height: 2.5rem;
@@ -79,7 +79,7 @@
         }
     }
     &__star-remaining{
-        color:grey;
+        color:$tertiary-color;
         font-size: 1.3rem;
         padding: 0.3rem;
         @include mobile-M {

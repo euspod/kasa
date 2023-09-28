@@ -42,7 +42,7 @@
     }
   
     &__btn-next {
-      color: white;
+      color: $secondary-color;
       font-size: 2em;
       position: absolute;
       bottom: 50%;
@@ -55,7 +55,7 @@
   
     &__btn-prev {
       font-size: 2em;
-      color: white;
+      color: $secondary-color;
       position: absolute;
       bottom: 50%;
       left: 0.5em;
@@ -70,7 +70,7 @@
       bottom: 5%;
       left: 50%;
       transform: translateX(-50%);
-      color: white;
+      color: $secondary-color;
       font-size: 1.5rem;
       @include mobile-M {
         font-size: 1rem;
