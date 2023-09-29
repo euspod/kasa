@@ -6,12 +6,7 @@
     align-items: flex-end;
     flex-direction: column; 
     width: 100%;
-    // @include tablet {
-    //     flex-direction: row-reverse;
-    //     align-items: center;
-    //     justify-content: space-between;
-    //     margin-block: 1em;
-    // }
+  
     @include mobile-S {
         align-items: center;
         flex-direction: row-reverse;
@@ -27,10 +22,7 @@
         padding: 0 25px;
         height: 50px;
         font-size: 1rem; 
-        // @include tablet {
-        //     text-align: right;
-        //     padding: 0;
-        // }
+       
         @include mobile-S {
             font-size: 0.85rem; 
             padding: 0;
@@ -53,15 +45,13 @@
     &__names{
         display:flex;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
     }
     
     &__rating {
         display: flex;
         margin: 1em;
-        // @include tablet {
-        //     margin:0;
-        // }
+       
         @include mobile-S {
             margin: 0;
         }

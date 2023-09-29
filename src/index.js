@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {createBrowserRouter,RouterProvider,Outlet,useParams} from "react-router-dom";
+import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import './sass/main.css';
 import Error from './pages/Error.js';
 import HomeApparts from './pages/HomeApparts'
@@ -29,9 +29,9 @@ const router = createBrowserRouter([
     errorElement: <Error />,
 
     children: [
-  //  {   path: "/error",
-  //     element:<Error />
-  //   },
+   {   path: "/*",
+      element:<Error />
+    },
    {   path: "/",
       element:<div>
         <Banner />,
