@@ -2,6 +2,7 @@ import '../sass/main.scss';
 import { Link } from 'react-router-dom';
 
 function Error() {
+ 
     return <>
     <div className='page-layout'>
         <div className='error-page'>

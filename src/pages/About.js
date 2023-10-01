@@ -1,7 +1,7 @@
-import Specifications from "../componentsJs/SpecSection";
+import Specifications from '../componentsJs/SpecSection';
 
 function About() {
-
+  
     return  <div className="about-sections">
                 <Specifications title='Fiabilité'
                 contents= <p> Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations son régulièrement vérifiées par nos équipes.</p> >
