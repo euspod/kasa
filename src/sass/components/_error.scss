@@ -5,35 +5,42 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    color:$primary-color; 
-        
-            
+    color: $primary-color;
+
+
     &__404 {
-        margin: 0 ; 
-        font-size:11rem;
-        font-weight:700;
+        margin: 0;
+        font-size: 11rem;
+        font-weight: 700;
+
         @include mobile-S {
-           font-size: 6rem;
+            font-size: 6rem;
         }
     }
+
     &__message {
         font-size: 1.5rem;
-        @include mobile-M{
+
+        @include mobile-M {
             font-size: 1.1rem;
         }
-        @include mobile-S{
+
+        @include mobile-S {
             font-size: 1.1rem;
             text-align: center;
         }
     }
+
     a {
         font-size: 1.5rem;
         text-decoration: underline;
         margin: 2.5rem;
+
         @include mobile-M {
             font-size: 1.1rem;
             margin: 1.5rem;
         }
+
         @include mobile-S {
             font-size: 1.1rem;
             margin: 1.5rem;
@@ -41,9 +48,10 @@
     }
 
     br {
-        display:none;
+        display: none;
+
         @include mobile-S {
-            display:inline;
+            display: inline;
         }
     }
 }

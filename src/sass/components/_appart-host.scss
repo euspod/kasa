@@ -1,30 +1,29 @@
-
 .appart-page {
     &__host {
-    display: flex;
-    flex-grow: 0;
-    align-items: flex-end;
-    flex-direction: column; 
-    width: 100%;
-  
-    @include mobile-S {
-        align-items: center;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        margin-top: 0.5rem;
+        display: flex;
+        flex-grow: 0;
+        align-items: flex-end;
+        flex-direction: column;
+        width: 100%;
+
+        @include mobile-S {
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+
     }
-    
-    }
- 
+
     &__profile {
         display: flex;
         align-items: center;
         padding: 0 25px;
         height: 50px;
-        font-size: 1rem; 
-       
+        font-size: 1rem;
+
         @include mobile-S {
-            font-size: 0.85rem; 
+            font-size: 0.85rem;
             padding: 0;
         }
 
@@ -36,48 +35,56 @@
             border-radius: 50%;
             background-color: $quinary-color;
             margin-left: 0.5em;
+
             @include mobile-S {
                 height: 2.5rem;
                 width: 2.5rem;
             }
         }
-        }
-    &__names{
-        display:flex;
+    }
+
+    &__names {
+        display: flex;
         flex-direction: column;
         align-items: flex-end;
     }
-    
+
     &__rating {
         display: flex;
         margin: 1em;
-       
+
         @include mobile-S {
             margin: 0;
         }
     }
+
     &__star {
-        color:$primary-color;
+        color: $primary-color;
         font-size: 1.3rem;
         padding: 0.3rem;
+
         @include mobile-M {
             font-size: 1.2rem;
         }
+
         @include mobile-S {
             font-size: 1rem;
             padding: 0.1rem;
         }
     }
-    &__star-remaining{
-        color:$tertiary-color;
+
+    &__star-remaining {
+        color: $tertiary-color;
         font-size: 1.3rem;
         padding: 0.3rem;
+
         @include mobile-M {
             font-size: 1.2rem;
         }
+
         @include mobile-S {
             font-size: 1rem;
             padding: 0.1rem;
         }
-        }
+    }
 }

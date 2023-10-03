@@ -1,37 +1,41 @@
-
 .appart-page {
     &__spec-sections {
         display: flex;
         justify-content: space-around;
-        gap:5rem;
+        gap: 5rem;
 
         @include tablet {
             flex-wrap: nowrap;
         }
+
         @include mobile-M {
             gap: 0.8em;
         }
+
         @include mobile-S {
             flex-direction: column;
             gap: 0.1em;
         }
     }
+
     &__specs {
         width: 100%;
         display: flex;
         color: $secondary-color;
         margin-bottom: 2em;
         overflow: hidden;
+
         @include mobile-M {
             margin-bottom: 1.5em;
         }
     }
-    
+
     &__specifications {
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
     }
+
     &__spec-bar {
         position: relative;
         display: flex;
@@ -46,29 +50,36 @@
         &.active {
             margin-bottom: -5px;
         }
+
         @include mobile-M {
             font-size: 0.9rem;
         }
+
         @include mobile-S {
             font-size: 0.9rem;
         }
     }
+
     &__trigger {
-        font-size:1.5rem;
+        font-size: 1.5rem;
         transform: rotate(180deg);
         transition: transform 0.5s ease-in-out;
+
         @include mobile-S {
-            font-size:1rem;
+            font-size: 1rem;
         }
     }
+
     &__trigger-active {
         transition: transform 0.5s ease-in-out;
         transform: rotate(0deg);
-        font-size:1.5rem;
+        font-size: 1.5rem;
+
         @include mobile-S {
-            font-size:1rem;
+            font-size: 1rem;
         }
     }
+
     &__spec-paragraph {
         transform: translateY(-100%);
         box-sizing: border-box;
@@ -77,19 +88,23 @@
         border-radius: 0.7rem;
         background-color: $quaternary-color;
         transition: transform 0s ease-in-out;
+        visibility: hidden;
+        position: absolute;
+
     }
+
     &__spec-paragraph-about {
         transform: translateY(-100%);
         box-sizing: border-box;
         visibility: hidden;
-        position:absolute;
+        position: absolute;
         color: $primary-color;
         padding: 1em;
         border-radius: 0.7rem;
         background-color: $quaternary-color;
         transition: transform 0.5s ease-in-out;
     }
-    
+
     &__spec-paragraph-active {
         transition: transform 0.5s ease-in-out;
         color: $primary-color;
@@ -101,9 +116,9 @@
     }
 
     ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-    
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
 }

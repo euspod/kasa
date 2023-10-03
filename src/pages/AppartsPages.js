@@ -16,11 +16,9 @@ function AppartPages() {
     try {
       const response = await fetch('/annonces.json');
       const responseData = await response.json();
-      console.log(responseData);
       setAnnonces(responseData);
       setLoading(false);
     } catch (error) {
-      console.log('Erreur', error);
     }
   };
 
@@ -53,13 +51,13 @@ function AppartPages() {
   }
 
 
-  
+
   return (
     <main className="appart-page" key={annonce.id}>
       <section className="appart-cover">
-        
+
         <div className="appart-page__slideShow-navigation">
-          <Slideshow gallery= {annonce.pictures}/>
+          <Slideshow gallery={annonce.pictures} />
         </div>
       </section>
       <section className="appart-page__infos-container">

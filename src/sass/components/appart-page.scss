@@ -1,23 +1,23 @@
-
 .appart-page {
-    color:$primary-color;
-    margin: auto;
-    &__infos-container {
-        display: flex;
-        margin-bottom: 1.5em;
-        margin-top: 1em;
-        width: 100%;
-      
-        @include mobile-M {
-            margin-bottom: 0.5em;
-            margin-top: 0.5em;
-          }
-       
-        @include mobile-S {
-            flex-direction: column;
-            margin-bottom: 0.5rem;
-            margin-top: 0.5rem;
-          }
-       
+  color: $primary-color;
+  margin: auto;
+
+  &__infos-container {
+    display: flex;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+    width: 100%;
+
+    @include mobile-M {
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
     }
+
+    @include mobile-S {
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+  }
 }

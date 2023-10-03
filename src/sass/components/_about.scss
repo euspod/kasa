@@ -1,7 +1,14 @@
-
 .about-sections {
     margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap:0;
+    gap: 0;
+
+    @include mobile-M {
+        margin-block: 3em;
+    }
+
+    @include mobile-S {
+        margin-block: 3em;
+    }
 }

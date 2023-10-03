@@ -2,10 +2,9 @@ import { useLocation } from 'react-router-dom';
 
 
 function Banner() {
- 
+
   const location = useLocation();
   const currentPath = location.pathname;
-  console.log('currentPath',currentPath);
   const bannerClass = currentPath === '/' ? 'banner-home' : 'banner-about';
 
   return (
